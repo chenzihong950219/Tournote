@@ -1,0 +1,50 @@
+<div class="wrap">
+  <img src="../../../assets/img/logomin.png" alt="" id="logo">
+  <div class="window">
+      <!-- 登陆 -->
+        <form *ngIf="registed" class="form-horizontal">
+            <div class="form-group">
+                <input type="text" class="form-control " name="userTel" placeholder="请输入您的手机号" (focus)="fresh(1)" [(ngModel)]="userTel">   
+            </div>
+            <div class="form-group">        
+                <input type="password" class="form-control " name="password" placeholder="请输入密码" (focus)="fresh(0)" [(ngModel)]="password">   
+            </div>
+            <span [class]="infoClass" id="info">{{info}}</span>
+            <a  class="pull-right">忘记密码？</a>
+            <div class="form-group login" >
+                <button class="btn form-control" (click)="doLogin()"><span>登陆</span></button>
+            </div>
+        </form>
+
+      <!-- 注册 -->
+      <form *ngIf="!registed" class="form-horizontal">
+          <div class="form-group">
+              <input type="text" class="form-control" name="userTel" placeholder="您的手机号码" (focus)="fresh(1)" [(ngModel)]="userTel">   
+          </div>
+          <span id="info" [class]="infoClass">{{info}}</span>
+          <div class="form-group">
+              <button class="btn form-control" (click)="doRegist()"><span>立即注册</span></button>
+          </div>
+      </form>
+
+        <p >用合作网站账户直接登录</p>
+        <div class="row">
+          <div class="col-xs-3 firsticon">
+            <div class="img img1"> </div>
+            <span>新浪微博</span>
+          </div>
+          <div class="col-xs-3">
+            <div class="img img2"></div>
+            <span>QQ</span>
+          </div>
+          <div class="col-xs-3">
+            <div class=" img img3"></div>
+            <span>微信</span>
+          </div>
+        </div>
+        <div class="bottom">
+          <span *ngIf="registed">还没有账号？<a  (click)="switch()">立即注册</a></span>
+          <span *ngIf="!registed">已经注册？<a  (click)="switch()">立即登陆</a></span>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+
+<div class="top">
+    <h1>一个想法从脑中闪过：来一场旅行吧！</h1>
+    <p>旅途中我想与你为伴</p>
+</div>
+
+<div class="middle">
+  <div class="container mw">
+
+    <div class="title">
+      <h2>热门目的地</h2>
+    </div>
+
+
+    <div class="row hot-address">
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+      <div class="col-xs-3 address">
+          <img src="./assets/img/destination/hotaddress1.jpeg" height="250">
+          <h4>稻城</h4>
+          <div class="show-detail">
+            <p>发起197个结伴<br>
+              2061关注<br>
+              440人报名</p>
+          </div>
+      </div>
+    
+    </div>
+    
+    <div class="row search">
+      <div class="col-xs-12 col-sm-2">
+        <input type="text" class="form-control" placeholder="目的地" [(ngModel)]="place">
+      </div>
+      <div class="col-xs-12 col-sm-3">
+          <input type="date" class="form-control" id="datetimepicker" placeholder="出发时间" [(ngModel)]="date">
+      </div>
+      <div class="col-xs-12 col-sm-3">
+          <button class="btn btn-primary" (click)="Select()"><span class="glyphicon glyphicon-search"></span> 查询</button>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+          <button class="btn btn-warning btn-block" routerLink="/companySponsor"><span class="glyphicon glyphicon-plus"></span> 发布我的计划</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<div class="bottom">
+  <div class="container mw">
+    <div class="row ">
+      <div class="col-xs-3 destination" *ngFor="let item of companyList;index as i">
+        <div class="wrap">
+            <div class="img" >
+              <img src="tournote/image/{{item.coverImg}}" height="235" alt="">
+              <div class="date"><span>{{item.days}}</span>天后</div>
+              <div class="box"></div>    
+            </div>
+            <h5>{{item.toCity}}</h5>
+            <p>
+                {{item.intro}}
+            </p>
+            <img class="head" src="../../../assets/img/userImg/user01.jpeg" alt="">
+            <span class="font-color">{{item.nikeName}}</span>
+            <div class="num">
+                <p>已有 <i>{{item.num}}</i>人加入</p>
+                <span class="link" [routerLink]="['/companyDetail',item.id]"></span>
+            </div>
+        </div> 
+      </div>  
+    </div>
+  </div>
+</div>
+<div class="z"></div>

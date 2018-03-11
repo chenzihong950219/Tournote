@@ -1,0 +1,56 @@
+.container{
+    width: 80%;
+    margin-top:20px;
+    margin-bottom: 600px;
+}
+.mw{
+    min-width: 1300px;
+}
+.aside{
+    margin-top: 20px;
+}
+.active{
+    background-color: #ff9d00;
+    color: white;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    width: 240px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+    padding: 0 16px;
+    text-align: left;
+    margin: 5px;
+}
+ul li:hover{
+    background-color: #ff9d00;
+}
+.row{
+    margin-top: 20px;
+}
+.row span{
+    line-height: 34px;
+}
+.lh{
+    line-height: 34px;
+}
+
+
+.warn{
+    /* line-height: 40px; */
+    color: red;
+    visibility: visible;
+}
+.hide{
+    visibility: hidden;
+}
+.imgbox{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 2px black;
+}

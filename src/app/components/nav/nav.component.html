@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default" id="top">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <img src="assets/img/logo.png" alt="">
+          </div>
+  
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="link"><a class="a active" href="#" routerLink="/index">游记 </a></li>
+              <li class="link"><a class="a" href="#" routerLink="/company">结伴而行</a></li>
+              <li class="dropdown link">
+                <a href="#" class="dropdown-toggle a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">预留链接 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a>Action</a></li>
+                  <li><a>Action</a></li>
+                  <li><a>Action</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a>Action</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a>Action</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="link" *ngIf="!userStatus"><a class="a" routerLink="/login">登陆</a></li>
+              <li class="link" *ngIf="!userStatus"><a class="a" routerLink="/login">注册</a></li>
+              <li *ngIf="userStatus"><a class="a">{{user.nickName}}</a></li>
+              <li class="dropdown link" *ngIf="userStatus">
+                <a  class="dropdown-toggle userimg a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img id="userimg" src="/tournote/image/{{user.userImgUrl}}" alt="" width="40px" height="40px"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li ><a routerLink="/user">我的设置</a></li>
+                  <li><a routerLink="/myPublic">我的发布</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li (click)="exit()"><a>退出登录</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </nav>
+  
+ 

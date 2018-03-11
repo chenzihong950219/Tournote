@@ -1,0 +1,70 @@
+.mw{
+    min-width: 1300px;
+}
+.top{
+    width: 100%;
+    height: 480px;
+    background: url("../../../assets/img/jieban/temp.jpg");
+    background-size: cover;
+    position: relative;
+}
+.top p{
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    top: 40%;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 36px;
+    color: white;
+    text-shadow: 0 1px 2px black;
+}
+.wrap{
+    width: 100%;
+    background-color: #efefef;
+    color: #666;
+}
+.container{
+    width: 90%;
+}
+.title{
+    border-bottom: 1px solid gray;
+    margin: 20px 0 10px 0 ;
+    height: 40px;
+    line-height: 40px;
+}
+.title h4{
+    line-height: 40px;
+}
+.col-xs-8 p{
+    font-size: 16px;
+}
+.content{
+    font-size: 14px !important;
+    line-height: 2em;
+    text-indent:2em
+}
+.nums{
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: white;
+    font-size: 26px;
+    text-shadow: 1px 1px 1px black;
+    border:none;
+    margin-top: -1px;
+    box-shadow: 1px 1px 2px gray
+}
+.nums h4{
+    line-height: 48px;
+}
+.col-sm-1{
+    width: 11%
+}
+.user{
+    text-align: center;
+}
+.user img{
+    width: 50px;
+    border-radius: 50px;
+}

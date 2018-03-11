@@ -1,0 +1,70 @@
+.container{
+    width: 80%;
+    margin-top:20px;
+    margin-bottom: 600px;
+}
+.mw{
+    min-width: 1300px;
+}
+.aside{
+    margin-top: 20px;
+}
+.active{
+    background-color: #ff9d00;
+    color: white;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    width: 240px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+    padding: 0 16px;
+    text-align: left;
+    margin: 5px;
+}
+ul li:hover{
+    background-color: #ff9d00;
+}
+.row{
+    margin-top: 20px;
+}
+.row span{
+    line-height: 34px;
+}
+.lh{
+    line-height: 34px;
+}
+
+.myTournote{
+    position: relative;
+    height: 170px;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+.myTournote h4{
+    float: left;
+    margin-left: 20px;
+}
+.img{
+    float: left;
+}
+.button{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 400px;
+    height: 40px;
+    float: right;
+}
+.btn{
+    float: right;
+    margin-left: 15px;
+    height: 40px;
+    width: 120px;
+}
+/* div{
+    border: 1px solid black;
+} */

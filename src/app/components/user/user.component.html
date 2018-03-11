@@ -1,0 +1,105 @@
+<div class="container mw">
+  <div class="col-xs-3">
+    <ul class="aside">
+      <li class="  active" (click)="doChange(1,$event)"> <span class="glyphicon glyphicon-user"></span>  我的信息</li>
+      <li class="" (click)="doChange(2,$event)"><span class="glyphicon glyphicon-facetime-video"></span> 我的头像</li>
+      <li class="" (click)="doChange(3,$event)"><span class="glyphicon glyphicon-lock"></span> 帐号安全</li>
+    </ul>
+  </div>
+  <!-- 信息页开始 -->
+  <div class="col-xs-9" *ngIf="info">
+    <h2>我的信息</h2>
+    <hr>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-1"> <span>昵称:</span> </div>
+      <div class="col-xs-5">
+        <input type="text" class="form-control" [(ngModel)]="nickname" name="nickname">
+      </div>
+      <div class="col-xs-3">
+        <span [class]="infoClass1">昵称不能为空</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-1"> <span> 性别:</span></div>
+      <div class="col-xs-6">
+        <div class="col-xs-4 lh">
+          <input type="radio" name="sex" value="1" id="male">
+          <label for="male">男</label>
+        </div>
+        <div class="col-xs-4 lh">
+          <input type="radio" name="sex" value="2" id="female">
+          <label for="female">女</label>
+        </div>
+        <div class="col-xs-4 lh">
+          <input type="radio" name="sex" value="3" id="secret" checked>
+          <label for="secret">保密</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-4 ">
+        <button class="btn btn-warning btn-block" (click)="changeNickname()">保存修改</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- 信息页结束 -->
+  <!-- 头像页开始 -->
+  <div class="col-xs-8" *ngIf="head">
+    <h2>我的头像</h2>
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-1">
+        <input (change)="show($event)" id="headImg" type="file" style="display:none" name="headimg" ng2FileSelect [uploader]="uploader">
+        <label for="headImg"><div class="imgbox"><img id="headimage" src="{{headImgUrl}}" height=100%></div></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-2 ">
+        <button class="btn btn-warning btn-block" (click)="changeUserImg()">点击上传</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- 头像页结束 -->
+  <!-- 安全页开始 -->
+  <div class="col-xs-8" *ngIf="safety">
+    <h2>帐号安全</h2>
+    <hr>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-2"> <span>新密码:</span> </div>
+      <div class="col-xs-4">
+        <input type="text" class="form-control" name="psw" [(ngModel)]="psw">
+      </div>
+      <div class="col-xs-3">
+        <span [class]="infoClass1">请输入密码</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-2"> <span>重复密码:</span></div>
+      <div class="col-xs-4">
+        <input type="text" class="form-control" name="repsw" [(ngModel)]="repsw">
+      </div>
+      <div class="col-xs-3">
+        <span [class]="infoClass2">两次输入密码不一致</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-2"> <span>验证码:</span></div>
+        <div class="col-xs-2"><input type="text" class="form-control" name="identify" [(ngModel)]="checkIdentify"></div>
+        <div class="col-xs-2">
+          <button class="btn btn-info btn-block" (click)="showIdentify()">获取验证码</button>
+      </div>
+      <div class="col-xs-4">
+        <span [class]="infoClass3">验证码错误</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-3 col-xs-4 ">
+        <button class="btn btn-warning btn-block" (click)="changePassword()">保存修改</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- 安全页结束 -->
+</div>

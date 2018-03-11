@@ -1,0 +1,13 @@
+.container {
+    width: 90%;
+}
+.form-group{
+    margin:15px;
+    padding-top: 10px;
+}
+.btn{
+    background-color: #ffa800;
+    color: white;
+    width: 200px;
+    margin-left: 20px;
+}

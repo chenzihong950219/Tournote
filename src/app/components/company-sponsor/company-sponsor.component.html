@@ -1,0 +1,121 @@
+
+
+<div class="container">
+  <h1>发起结伴<span>（一个真诚的请求，才会赢得更多靠谱的旅伴）</span></h1>
+ <form class="form-horizontal">
+   <div class="form-group">
+     <label for="" class="col-xs-1 control-label">
+       <span>*</span>
+       活动标题
+     </label>
+     <div class="col-xs-11">
+      <input type="text" class="form-control" id="" name="title"  [(ngModel)]="together.title">
+     </div>
+   </div>
+
+   <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+        <span>*</span>
+        联系方式
+      </label>
+      <div class="col-xs-3">
+       <input type="text" class="form-control" id="" name="tel" [(ngModel)]="together.tel" placeholder="手机">
+      </div>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="" name="QQ" [(ngModel)]="together.qq" placeholder="QQ">
+      </div>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="" name="weixin" [(ngModel)]="together.weixin" placeholder="微信">
+      </div>
+      <div class="col-xs-1">
+        <span class="lh">(可选填)</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+        <span>*</span>
+        目的地
+      </label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control" id="" name="to" [(ngModel)]="together.to">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label" >
+        <span>*</span>
+        出发地
+      </label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control" id="" name="from" [(ngModel)]="together.from">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label" >
+        <span>*</span>
+        出发时间
+      </label>
+      <div class="col-xs-6">
+        <input type="date" class="form-control" id="" name="startDate" [(ngModel)]="together.startDate">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+        <span>*</span>
+        活动天数
+      </label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control" id="" name="lastDays" [(ngModel)]="together.lastDays">
+      </div>
+      <div class="col-xs-1">
+        <span class="lh">天</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+        <span>*</span>
+        限制人数
+      </label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control" id="" name="limitNum" [(ngModel)]="together.limitNum">
+      </div>
+      <div class="col-xs-1">
+        <span class="lh">人</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+        <span>*</span>
+        结伴描述
+      </label>
+      <div class="col-xs-11">
+        <textarea name="" id="" cols="30" rows="10" class="form-control" name="intro" [(ngModel)]="together.intro"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+        <span>*</span>
+        封面图片
+      </label>
+      <div class="col-xs-11">
+        <input (change)="show($event)" id="uploadImg" type="file" style="display:none" ng2FileSelect [uploader]="uploader" >
+        <label for="uploadImg"><img width=300 height=300 [src]="imgUrl" alt=""></label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="" class="col-xs-1 control-label">
+      </label>
+      <button class="btn" (click)="addCompany()">发表结伴</button>
+    </div>
+    
+
+ </form>
+</div>
+

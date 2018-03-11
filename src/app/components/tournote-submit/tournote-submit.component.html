@@ -1,0 +1,57 @@
+<div #tourImg class="top" >
+  <input  (change)="show($event)" id="uploadImg" type="file" style="display:none" ng2FileSelect [uploader]="uploader" >
+  <label for="uploadImg"><img  src="../../../assets/img/addtop.png" alt=""></label>
+  <h2>设置游记头图</h2>
+  <p>
+    图片建议选择尺寸大于1680px的高清大图，如相机原图
+  </p>
+</div>
+
+
+<div class="container mw">
+  <div class="row margin">
+    <div class="col-xs-2 title">
+      <span>*</span>
+      游记标题
+    </div>
+    <div class="col-xs-6">
+      <input type="text" class="form-control form_input" [(ngModel)]="tour.title">
+    </div>
+    <div class="col-xs-3">
+      <span [class]="infoClass1">请填写标题</span>
+    </div>
+  </div>
+  <div class="row margin">
+    <div class="col-xs-2 title">
+      <span>*</span>
+      游记类型
+    </div>
+    <div class="col-xs-6">
+      <select class="form-control form_input" [(ngModel)]="tour.type">
+        <option value="出游攻略">出游攻略</option>
+        <option value="旅游行迹">旅游行迹</option>
+        <option value="点点滴滴">点点滴滴</option>
+        <option value="所见所闻">所见所闻</option>
+      </select>
+    </div>
+     <div class="col-xs-3">
+      <span [class]="infoClass2">请选择类型</span>
+    </div>
+    
+  </div>
+  <div class="row margin">
+    <div class="col-xs-10 col-xs-offset-1 text">
+        <ueditor #ueditor [config]="cfg" ></ueditor>
+    </div>
+  </div>
+  <div class="row maxWidth">
+    <div class="col-xs-3 col-xs-offset-1">
+      <span [class]="infoClass3">游记内容不能为空</span>
+    </div>
+    <div class="col-xs-2 col-xs-offset-6">
+      <button class="btn btn-warning submit" (click)="doUpload()">提交游记</button>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,71 @@
+<div class="top">
+	<div class="swiper-container mw">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide " style="background:url('./assets/img/swiperImg/show01.jpeg') ">
+                <h2><span>15</span>/Sep.2017</h2>
+                <h3>台北｜｜我喜欢上你时的内心活动</h3>
+            </div>
+            <div class="swiper-slide" style="background:url('./assets/img/swiperImg/show02.jpeg')">
+                <h2><span>15</span>/Sep.2017</h2>
+                <h3>台北｜｜我喜欢上你时的内心活动</h3>
+            </div>
+            <div class="swiper-slide" style="background:url('./assets/img/swiperImg/show03.jpeg')">
+                <h2><span>15</span>/Sep.2017</h2>
+                <h3>台北｜｜我喜欢上你时的内心活动</h3>
+            </div>
+            <div class="swiper-slide" style="background:url('./assets/img/swiperImg/show04.jpeg')">
+                <h2><span>15</span>/Sep.2017</h2>
+                <h3>台北｜｜我喜欢上你时的内心活动</h3>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<div class="container mw">
+
+    <div class="bar mw ">
+        <img src="assets/img/resident-hd.png" alt="">
+        <button class="btn btn-style" routerLink="/submitTournote">
+            <span class="glyphicon glyphicon-edit"></span>写游记
+        </button>
+    </div>
+
+
+
+    <div class="row">
+        <div class=" col-xs-6 item" *ngFor="let tour of tours">
+            <div class="col-xs-3 mw2 col-sm-offset-1">
+                <h2>{{tours[0].type}}</h2>
+                <h6>发布时间：{{tour.publishDate}}</h6>
+                <h3>作者</h3>
+                <div class="head">
+                    <img width="100%" height="100%" src="tournote/image/{{tour.userImgUrl}}" alt="">
+                </div>
+                <span class="font-color">{{tour.nickName}}</span>
+            </div>
+            <a [routerLink]="['/detailTournote',tour.tourid]" class="no">
+                <div class="col-xs-7 article">
+                    <div class="img">
+                        <img  width="100%" src="tournote/image/{{tour.contentImg}}" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="font-color">{{tour.title}}</p>
+                        <p class="overflow" [innerHTML]="tour.content">
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        
+    </div>
+
+    <div class="more mw">
+        <span>加载更多......</span>
+    </div>
+</div>
+
+
+	

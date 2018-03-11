@@ -1,0 +1,46 @@
+<div class="container mw">
+  <div class="col-xs-3">
+    <ul class="aside">
+      <li class="  active" (click)="doChange(1,$event)"> <span class="glyphicon glyphicon-leaf">
+        </span>  
+        我的游记
+      </li>
+      <li class="" (click)="doChange(2,$event)"><span class="glyphicon glyphicon-user">
+        </span> 
+        我的结伴
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  <div class="col-xs-9" *ngIf="isTournote">
+    <h2>我的游记</h2>
+    <hr>
+    <div class="myTournote">
+      <div class="img">
+        <img src="../../../assets/img/youji/wKgBZ1lnLCuAGVQoACZW96OmPV854.jpg" width="220" height="140" alt="">
+      </div>
+      <h4>
+        2017年在夏天过春节，纯净新西兰14天2500公里自驾游
+      </h4>
+      <div class="button">
+        <button class="btn btn-warning">修改</button>
+        <button class="btn btn-warning">删除</button>
+      </div>
+      
+    </div>
+
+   
+
+    
+  </div>
+
+
+  <div class="col-xs-8" *ngIf="isCompany">
+    <h2>我的结伴</h2>
+    <hr>
+    
+  </div>
+
+</div>

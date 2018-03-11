@@ -1,0 +1,26 @@
+.foot{
+    height: 70px;
+    background-color: rgb(33, 28, 28);
+    color: white;
+    width: 100%;
+    text-align:center;
+    line-height: 70px;
+}
+.anchor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #ff9d00;
+    right: 40px;
+    bottom: 25px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    border:1px solid #ff9d00;
+}
+.anchor:hover{
+    box-shadow: 0 0 2px #ff9d00;
+}
